@@ -49,4 +49,24 @@ class MainActivity : AppCompatActivity() {
 
         return true
     }
+
+    private fun calculateBestPrice() {
+
+        val priceAlcohol = editAlcohol.text.toString()
+        val priceGasoline = editGasoline.text.toString()
+
+        val validationResult = validateFields(priceAlcohol, priceGasoline)
+        if(validationResult){
+            val priceAlcoholDouble = priceAlcohol.toDouble()
+            val priceGasolineDouble = priceGasoline.toDouble()
+
+            val result = priceAlcoholDouble / priceGasolineDouble
+
+            if( result >= 0.7 ){
+                textResult.text = "Melhor utilizar Gasolina!"
+            }else{
+                textResult.text = "Melhor utilizar Álcool!"
+            }
+        }
+    }
 }
