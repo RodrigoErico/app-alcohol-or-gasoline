@@ -20,5 +20,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initializesInterfaceComponents()
+    }
+
+    private fun initializesInterfaceComponents() {
+
+        textInputAlcohol = findViewById(R.id.text_input_alcohol)
+        editAlcohol = findViewById(R.id.edit_alcohol)
+        textInputGasoline = findViewById(R.id.text_input_gasoline)
+        editGasoline = findViewById(R.id.edit_gasoline)
+
+        btnCalculate = findViewById(R.id.btn_calculate)
+        textResult = findViewById(R.id.text_result)
     }
 }
