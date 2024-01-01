@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:textAlignment="center"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="RtlCompat">
 
     <ImageView
         android:id="@+id/logo"
