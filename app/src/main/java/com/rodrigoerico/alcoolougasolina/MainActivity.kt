@@ -33,4 +33,20 @@ class MainActivity : AppCompatActivity() {
         btnCalculate = findViewById(R.id.btn_calculate)
         textResult = findViewById(R.id.text_result)
     }
+
+    private fun validateFields(priceAlcohol: String, priceGasoline: String): Boolean {
+
+        textInputAlcohol.error = null
+        textInputGasoline.error = null
+
+        if(priceAlcohol.isEmpty()){
+            textInputAlcohol.error = "Digite o preço do álcool!"
+            return false
+        }else if(priceGasoline.isEmpty()){
+            textInputGasoline.error = "Digite o preço da gasolina!"
+            return false
+        }
+
+        return true
+    }
 }
