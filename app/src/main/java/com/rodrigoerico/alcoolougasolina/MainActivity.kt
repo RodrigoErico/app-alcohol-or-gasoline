@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initializesInterfaceComponents()
+        btnCalculate.setOnClickListener{
+            calculateBestPrice()
+        }
     }
 
     private fun initializesInterfaceComponents() {
